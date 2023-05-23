@@ -1,0 +1,120 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-size: 10px
+
+    body
+        font-family: "Roboto"
+        font-weight: 400
+        color: #444444
+        letter-spacing: 1rem
+        padding: 5rem
+        background-color: white
+
+    .container
+        background-color: #f7f7f7
+    
+    .header
+        position: relative
+        height: 95vh
+        background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 90%),  url(../img/bgballons.jpg) center / cover no-repeat
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+        &__logo
+            position: absolute
+            left: 5rem
+            top: 5rem
+            height: 5rem
+        &__box
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -70%)
+            width: 90%
+            text-align: center
+
+    .title-first
+        color: #fff
+        &__main
+            display: block
+            font-weight: 700
+            font-size: 5rem
+            line-height: 4rem
+            letter-spacing: .5rem
+            text-transform: uppercase
+            margin-bottom: 3rem
+            animation-name: bottomToTop
+            animation-fill-mode: backwards
+            animation-duration: 1s
+            animation-timing-function: ease
+            
+        &__secondary
+            display: block
+            font-weight: 100
+            font-size: 4rem
+            line-height: 4.8rem
+            letter-spacing: .5rem
+            animation-name: bottomToTop
+            animation-fill-mode: backwards
+            animation-delay: .5s
+            animation-duration: 1s
+            animation-timing-function: ease
+            margin-bottom: 5rem
+
+
+@keyframes bottomToTop
+    0%
+        opacity: 0
+        transform: translateY(-100px)
+    100%
+        opacity: 1
+        transform: translateY(0px)
+
+.btn
+    &:link, &:visited
+        text-transform: uppercase
+        text-decoration: none
+        font-size: 2rem
+        letter-spacing: .4rem
+        color: #777777
+        padding: 2rem 4rem
+        background: white
+        border-radius: 5rem
+        display: inline-block
+        animation-name: bottomToTop
+        animation-fill-mode: backwards
+        animation-delay: 1s
+        animation-duration: 1.2s
+        animation-timing-function: ease
+        margin-bottom: 5rem
+        position: relative
+    &:hover
+        transform: translateY(-.4rem)
+        box-shadow: (0px .4rem .4rem rgba(0, 0, 0, 0.1))
+        &::after
+            opacity: 0
+            transform: scaleX(2)scaleY(1.5)
+    &:active
+        transform: translateY(-.4rem)
+    &::after
+        content: ""
+        background: white
+        width: 100%
+        height: 100%
+        border-radius: 5rem
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        transition: all .5s
+
+       
+
+
+
+
+        
+    
+        
+
